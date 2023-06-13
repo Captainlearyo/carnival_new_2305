@@ -46,7 +46,6 @@ class Carnival
 
 
   def summery 
-    p "test"
     hash = {}
     hash[:revenue_earned] = total_revenue
     hash[:visitor_count] = @rides.reduce(0){ |sum, i| sum + i.rider_log.count}
