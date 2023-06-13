@@ -18,8 +18,7 @@ class Ride
         "not tall enough"
       else
         @total_revenue += @admission_fee
-        fee = visitor.spending_money.delete("$").to_i - @admission_fee
-        visitor.spending_money = "$" + fee.to_s  
+        visitor.spending_money -= @admission_fee 
         if @rider_log.include?(visitor)
         @rider_log[visitor] += 1
         else 
